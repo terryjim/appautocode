@@ -1,3 +1,7 @@
+@import '~antd/dist/antd.css';
+@import '~react-grid-layout/css/styles.css';
+@import '~react-resizable/css/styles.css';
+
 .App {
   text-align: center;
 }
@@ -23,11 +27,28 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.remove{
+  position: absolute;
+  right: 7px;
+  top: 1px;
+  cursor: pointer;
+  z-index: 999;
+  display:none;
 }
+.react-grid-item{
+  border: 0px solid #000000;
+  padding: 0px;
+}
+
+.react-grid-item:hover .remove{
+  display:inline-block;
+}
+
+.react-resizable-handle{
+  visibility: hidden;
+}
+
+.react-grid-item:hover .react-resizable-handle{
+  visibility: visible;
+}
+
